@@ -5,14 +5,23 @@ let pipe = [];
 
 
 function setup(){
-    createCanvas(800, 800);
+    createCanvas(600, 600);
+    bird = new Bird()
 }
 function draw(){
     background(0);
+    bird.draw();
+    bird.update();
 
 
  
-    if (frameCount % 60 === 0) {
-        pipe.push(new Pipepair());
-    }
+    // if (frameCount % 60 === 0) {
+    //     pipe.push(new Pipepair());
+    // }
 }
+
+function keyPressed() {
+    if (keyCode == SPACE_BAR) {
+      bird.up();
+    }
+  }

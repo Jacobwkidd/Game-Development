@@ -7,12 +7,17 @@ class Bird {
     static velocity = 0;
     
 
-    constructor(){
-        
+    constructor(WIDTH, X_POSITION, y, gravity, LIFT, velocity){
+        this.WIDTH = WIDTH;
+        this.X_POSITION = X_POSITION;
+        this.y = y;
+        this.gravity = gravity;
+        this.LIFT = LIFT;
+        this.velocity = velocity;
     }
     draw(){
         fill(255);
-        ellipse(this.X_POSITION, this.y, 32, 32); // making a circle
+        ellipse(this.X_POSITION, this.y, 32); // making a circle
     }
     update(){
       this.velocity += this.gravity;

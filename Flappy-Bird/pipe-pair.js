@@ -17,7 +17,12 @@ class PipePair{
     - highlight (boolean representing if this PipePair must be highlighted)
     */
     constructor(){
-        
+        this.WIDTH = WIDTH;
+        this.SPEED = SPEED;
+        this.x = x;
+        this.top = top;
+        this.bottom = bottom;
+        this.highlight = highlight;
     }
     /*
     Draws out the PipePair. Will need to fill with initial color, and will
@@ -26,15 +31,16 @@ class PipePair{
     draw() {
     //will need to call rect() twice - once for the top pipe, and once
     //for the bottom pipe
-        top = react(30, 30, 30, 5);
-        bottom = react(60, 60, 30, 5);
+      this.x = 600;
+      rect(x, 1, 25, 100);
+      rect(x, 450, 25, 150);
         
     }
     /*
     Will be used to update the x-position of the PipePair.
     */
     update(){
-        
+        x = x - 2;
     }
     /*
     Determines whether or not the PipePair is off screen.
